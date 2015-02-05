@@ -31,6 +31,10 @@ Examples:
 
  	http://localhost/osclass.3.3.2/api/v0.1/item/1
 
+5.Get item resources,item id = 1
+
+ 	http://localhost/osclass.3.3.2/api/v0.1/item/1/images
+
 
 
 Easy to develop:
