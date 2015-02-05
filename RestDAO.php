@@ -155,5 +155,51 @@ class RestItem extends Item {
         parent::__construct();
     }
 
+    public function findItemByPrimaryKey($itemID = NULL) {
+        $this->dao->select("*");
+        $this->dao->from(DB_TABLE_PREFIX . 't_item_resource');
+        $this->dao->where('fk_i_item_id', $itemID);
+
+        $rs = $this->dao->get();
+
+        if ($rs === false) {
+            return array();
+        }
+        return $rs->result();
+    }
+    
+}
+
+class RestUser extends User {
+
+    private static $instance;
+
+    public static function newInstance() {
+        if (!self::$instance instanceof self) {
+            self::$instance = new self;
+        }
+        return self::$instance;
+    }
+
+    /**
+     * Set data related to t_user table
+     */
+    function __construct() {
+        parent::__construct();
+    }
+
+    public function findByPrimaryKey($userId = NULL) {
+        $this->dao->select("*");
+        $this->setPrimaryKey('pk_i_id');
+        $this->dao->from(DB_TABLE_PREFIX . 't_user');
+        $this->dao->where('pk_i_id', $userId);
+
+        $rs = $this->dao->get();
+
+        if ($rs === false) {
+            return array();
+        }
+        return $rs->result();
+    }
     
 }
