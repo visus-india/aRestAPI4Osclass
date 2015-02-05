@@ -17,23 +17,23 @@ Examples:
 
 1.Get category list, include all language.
 
-  	http://localhost/osclass.3.3.2/api/v0.1/category or {hoemeurl}/api/v0.1/category
+  	http://www.your-osclass-site.com/api/v0.1/category or {hoemeurl}/api/v0.1/category
 	
 2.Get a category detail, category id = 9 
 
-  	http://localhost/osclass.3.3.2/api/v0.1/category/9
+  	http://www.your-osclass-site.com/api/v0.1/category/9
 	
 3.Get all items list in category id = 9	
 
-   	http://localhost/osclass.3.3.2/api/v0.1/category/9/items
+   	http://www.your-osclass-site.com/api/v0.1/category/9/items
 
 4.Get item detail,item id = 1
 
- 	http://localhost/osclass.3.3.2/api/v0.1/item/1
+ 	http://www.your-osclass-site.com/api/v0.1/item/1
 
 5.Get item resources,item id = 1
 
- 	http://localhost/osclass.3.3.2/api/v0.1/item/1/images
+ 	http://www.your-osclass-site.com/api/v0.1/item/1/images
 
 
 
