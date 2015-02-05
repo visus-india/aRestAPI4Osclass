@@ -138,11 +138,44 @@ class apiServer {
     }
 
     /**
+     * GET Item images by Id
+     *
+     * @url GET /item/$itemID/images
+     */
+    public function getItemImagesId($itemID) {
+  
+        if ($itemID) {
+            return (RestItem::newInstance()->findItemByPrimaryKey($itemID));
+        }
+
+        return array();
+    }
+
+    /**
      * @url GET /item/$id/msg
      */
     public function getItemMsg($id) {
         return array();
     }
+
+    /**
+     * GET Users by Id
+     *
+     * @url GET /users
+     * @url GET /users/$userId;
+     */
+    public function getUser($userId) {
+  
+        if ($userId) {
+            // not working so far...
+            return (User::newInstance()->findByPrimaryKey($userId));
+        }
+
+        return array();
+    }
+
+
+    // POST methods
 
     /**
      * Search
@@ -177,5 +210,21 @@ class apiServer {
         
         return ($items);
         
+    }
+
+
+    // DELETE methods
+
+    /**
+     * DELETE Item by Id
+     *
+     * @url DELETE /item/$id
+     */
+    public function deleteItem($id) {
+        if ($id) {
+            return (Item::newInstance()->findByPrimaryKey($id));
+        }
+
+        return array();
     }
 }
