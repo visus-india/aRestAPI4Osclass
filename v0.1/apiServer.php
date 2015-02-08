@@ -9,7 +9,7 @@
 /**
  * Description of apiServer
  *
- * This api for OSClass 3.3.2
+ * This api for Osclass
  * 
  */
 class apiServer {
@@ -174,7 +174,6 @@ class apiServer {
         return array();
     }
 
-
     // POST methods
 
     /**
@@ -211,7 +210,6 @@ class apiServer {
         return ($items);
         
     }
-
 
     // DELETE methods
 
