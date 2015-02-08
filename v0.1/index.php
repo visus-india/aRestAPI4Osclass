@@ -8,6 +8,7 @@ require_once '../RestDAO.php';
 require_once 'apiServer.php';
 
 $server = new RestServer('debug');
+
 //$server->refreshCache();
 
 $server->addClass('apiServer');
