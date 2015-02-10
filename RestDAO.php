@@ -188,7 +188,7 @@ class RestUser extends User {
         parent::__construct();
     }
 
-    public function findByPrimaryKey($userId = NULL) {
+    public function findUserByPrimaryKey($userId = NULL) {
         $this->dao->select("*");
         $this->setPrimaryKey('pk_i_id');
         $this->dao->from(DB_TABLE_PREFIX . 't_user');
