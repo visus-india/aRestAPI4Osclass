@@ -134,12 +134,12 @@ class apiServer {
     /**
      * GET Item images by Id
      *
-     * @url GET /item/$itemID/images
+     * @url GET /item/$itemId/images
      */
-    public function getItemImagesId($itemID) {
+    public function getItemImagesId($itemId) {
   
-        if ($itemID) {
-            return (RestItem::newInstance()->findItemByPrimaryKey($itemID));
+        if ($itemId) {
+            return (RestItem::newInstance()->findItemByPrimaryKey($itemId));
         }
 
         return array();
@@ -153,16 +153,16 @@ class apiServer {
     }
 
     /**
-     * GET Users by Id
+     * GET User by Id
      *
      * @url GET /users
      * @url GET /users/$userId;
      */
     public function getUser($userId) {
-  
+
         if ($userId) {
             // not working so far...
-            return (User::newInstance()->findByPrimaryKey($userId));
+            return (User::newInstance()->findUserByPrimaryKey($userId));
         }
 
         return array();
